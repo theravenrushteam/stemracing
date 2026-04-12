@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAVEN RUSH - Home</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-full">
+  <canvas id="particles"></canvas>
+  <div class="main-wrap" id="mainWrap">
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="mainHeader" style="background: rgba(10,14,26,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,212,255,0.1);">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden" style="background: linear-gradient(135deg, #00d4ff, #0066aa); box-shadow: 0 0 20px rgba(0,212,255,0.3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span class="heading-font text-lg glow-text" id="logoText">RAVEN RUSH</span>
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-7" id="desktopNav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="team.html" class="nav-link">Team</a>
+          <a href="car.html" class="nav-link">Car</a>
+          <a href="stem.html" class="nav-link">STEM</a>
+          <a href="sustainability.html" class="nav-link">Sustainability</a>
+          <a href="data.html" class="nav-link">Data</a>
+          <a href="future.html" class="nav-link">Future</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        
+        <!-- Mobile hamburger -->
+        <div class="lg:hidden hamburger cursor-pointer" id="hamburger" onclick="toggleMobileMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div class="mobile-menu flex-col items-center gap-4 py-6 lg:hidden" id="mobileMenu" style="background: rgba(10,14,26,0.95);">
+        <a href="index.html" class="nav-link active" onclick="toggleMobileMenu()">Home</a>
+        <a href="team.html" class="nav-link" onclick="toggleMobileMenu()">Team</a>
+        <a href="car.html" class="nav-link" onclick="toggleMobileMenu()">Car</a>
+        <a href="stem.html" class="nav-link" onclick="toggleMobileMenu()">STEM</a>
+        <a href="sustainability.html" class="nav-link" onclick="toggleMobileMenu()">Sustainability</a>
+        <a href="data.html" class="nav-link" onclick="toggleMobileMenu()">Data</a>
+        <a href="future.html" class="nav-link" onclick="toggleMobileMenu()">Future</a>
+        <a href="contact.html" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
+      </div>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section>
+      <!-- HERO -->
+      <div class="relative overflow-hidden" style="min-height: 100vh; padding-top: 80px;">
+        <div class="orb" style="width:500px;height:500px;background:#00d4ff;top:-100px;right:-100px;" id="orb1"></div>
+        <div class="orb" style="width:400px;height:400px;background:#0066cc;bottom:-80px;left:-80px;" id="orb2"></div>
+        <div id="speedLines" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+        
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-6" style="min-height: calc(100vh - 80px); padding: 120px 0 80px;" id="heroContent">
+          <div class="mb-4 text-sm font-semibold tracking-widest uppercase" style="color: #00d4ff; opacity:0.7;">
+            STEM RACING TEAM
+          </div>
+          <h1 class="heading-font glow-text text-6xl md:text-8xl lg:text-9xl mb-6" id="heroTitle" style="line-height:0.95;">RAVEN RUSH</h1>
+          <p class="text-xl md:text-2xl font-light mb-10 max-w-xl" style="color: #8892a8;" id="heroTagline">Born to Race, Built to Win</p>
+          <a href="team.html" class="cta-btn text-base">Explore Our Team</a>
+          
+          <div class="mt-16 flex flex-col items-center gap-2 opacity-50" style="animation: float 2s ease-in-out infinite;">
+            <span class="text-xs uppercase tracking-widest" style="color:#8892a8;">Scroll</span>
+            <i data-lucide="chevron-down" style="color:#00d4ff; width:20px;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- ABOUT -->
+      <div class="relative py-24 px-6 grid-bg">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="reveal">
+            <span class="text-sm font-semibold tracking-widest uppercase glow-text">About Us</span>
+            <h2 class="heading-font text-3xl md:text-5xl mt-3 mb-8" style="color:#e0e6f0;" id="aboutHeading">Who We Are</h2>
+          </div>
+          <p class="reveal text-lg leading-relaxed" style="color:#8892a8; transition-delay:0.2s;" id="aboutText">We are a focused and adaptable STEM racing team driven by innovation, teamwork, and performance. Inspired by Formula 1, we combine creativity, engineering, and strategy to build high-performance solutions.</p>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- HIGHLIGHTS -->
+      <div class="relative py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16 reveal">
+            <span class="text-sm font-semibold tracking-widest uppercase glow-text">Performance</span>
+            <h2 class="heading-font text-3xl md:text-5xl mt-3" style="color:#e0e6f0;">Highlights</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glow-border rounded-2xl p-8 text-center tilt-card reveal-scale" style="background: rgba(0,212,255,0.03); transition-delay:0.1s;">
+              <div class="text-4xl font-bold glow-text stat-num mb-2">18.6</div>
+              <div class="text-sm uppercase tracking-wider" style="color:#8892a8;">km/h Avg Speed</div>
+            </div>
+            <div class="glow-border rounded-2xl p-8 text-center tilt-card reveal-scale" style="background: rgba(0,212,255,0.03); transition-delay:0.2s;">
+              <div class="text-4xl font-bold glow-text stat-num mb-2">1.422s</div>
+              <div class="text-sm uppercase tracking-wider" style="color:#8892a8;">Best Race Time</div>
+            </div>
+            <div class="glow-border rounded-2xl p-8 text-center tilt-card reveal-scale" style="background: rgba(0,212,255,0.03); transition-delay:0.3s;">
+              <div class="text-4xl font-bold glow-text stat-num mb-2">4</div>
+              <div class="text-sm uppercase tracking-wider" style="color:#8892a8;">Team Members</div>
+            </div>
+            <div class="glow-border rounded-2xl p-8 text-center tilt-card reveal-scale" style="background: rgba(0,212,255,0.03); transition-delay:0.4s;">
+              <div class="flex justify-center gap-2 mb-2">
+                <i data-lucide="zap" style="color:#00d4ff; width:28px;"></i>
+                <i data-lucide="target" style="color:#00d4ff; width:28px;"></i>
+                <i data-lucide="leaf" style="color:#00d4ff; width:28px;"></i>
+              </div>
+              <div class="text-sm uppercase tracking-wider" style="color:#8892a8;">Speed · Precision · Sustainability</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 py-12 px-6 text-center" style="border-top: 1px solid rgba(0,212,255,0.1); background: rgba(5,8,18,0.8);">
+    <div class="heading-font text-lg glow-text mb-3" id="footerLogo">RAVEN RUSH</div>
+    <p class="text-xs" style="color:#8892a8;">© 2025 Raven Rush STEM Racing Team. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

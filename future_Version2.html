@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAVEN RUSH - Future</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-full">
+  <canvas id="particles"></canvas>
+  <div class="main-wrap" id="mainWrap">
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="mainHeader" style="background: rgba(10,14,26,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,212,255,0.1);">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden" style="background: linear-gradient(135deg, #00d4ff, #0066aa); box-shadow: 0 0 20px rgba(0,212,255,0.3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span class="heading-font text-lg glow-text" id="logoText">RAVEN RUSH</span>
+        </a>
+        
+        <nav class="hidden lg:flex items-center gap-7" id="desktopNav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="team.html" class="nav-link">Team</a>
+          <a href="car.html" class="nav-link">Car</a>
+          <a href="stem.html" class="nav-link">STEM</a>
+          <a href="sustainability.html" class="nav-link">Sustainability</a>
+          <a href="data.html" class="nav-link">Data</a>
+          <a href="future.html" class="nav-link active">Future</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        
+        <div class="lg:hidden hamburger cursor-pointer" id="hamburger" onclick="toggleMobileMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      
+      <div class="mobile-menu flex-col items-center gap-4 py-6 lg:hidden" id="mobileMenu" style="background: rgba(10,14,26,0.95);">
+        <a href="index.html" class="nav-link" onclick="toggleMobileMenu()">Home</a>
+        <a href="team.html" class="nav-link" onclick="toggleMobileMenu()">Team</a>
+        <a href="car.html" class="nav-link" onclick="toggleMobileMenu()">Car</a>
+        <a href="stem.html" class="nav-link" onclick="toggleMobileMenu()">STEM</a>
+        <a href="sustainability.html" class="nav-link" onclick="toggleMobileMenu()">Sustainability</a>
+        <a href="data.html" class="nav-link" onclick="toggleMobileMenu()">Data</a>
+        <a href="future.html" class="nav-link active" onclick="toggleMobileMenu()">Future</a>
+        <a href="contact.html" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
+      </div>
+    </header>
+
+    <!-- FUTURE SECTION -->
+    <section style="padding-top: 80px;">
+      <div class="pt-28 pb-24 px-6 grid-bg" style="min-height:100vh;">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-16 reveal">
+            <span class="text-sm font-semibold tracking-widest uppercase glow-text">Roadmap</span>
+            <h2 class="heading-font text-4xl md:text-6xl mt-3 glow-text">Future Plans</h2>
+            <p class="mt-6 text-lg max-w-2xl mx-auto" style="color:#8892a8;">Our journey doesn't stop here. We aim to keep improving, innovating, and inspiring through STEM and racing.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <div class="glow-border rounded-2xl p-8 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.1s; cursor: pointer;">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);">
+                  <i data-lucide="zap" style="color:#00d4ff; width:24px; height:24px;"></i>
+                </div>
+                <h3 class="heading-font text-xl glow-text">Improve Car Performance</h3>
+              </div>
+              <p class="text-sm leading-relaxed" style="color:#8892a8;">Enhance speed, aerodynamics, and efficiency through intensive testing and design refinement.</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="glow-border rounded-2xl p-8 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.2s; cursor: pointer;">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);">
+                  <i data-lucide="book-open" style="color:#00d4ff; width:24px; height:24px;"></i>
+                </div>
+                <h3 class="heading-font text-xl glow-text">STEM Workshops</h3>
+              </div>
+              <p class="text-sm leading-relaxed" style="color:#8892a8;">Organize educational workshops to inspire younger students to explore STEM fields and innovation.</p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="glow-border rounded-2xl p-8 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.3s; cursor: pointer;">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);">
+                  <i data-lucide="network" style="color:#00d4ff; width:24px; height:24px;"></i>
+                </div>
+                <h3 class="heading-font text-xl glow-text">Collaboration</h3>
+              </div>
+              <p class="text-sm leading-relaxed" style="color:#8892a8;">Partner with other schools and teams to exchange knowledge, ideas, and best practices.</p>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="glow-border rounded-2xl p-8 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.4s; cursor: pointer;">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);">
+                  <i data-lucide="video" style="color:#00d4ff; width:24px; height:24px;"></i>
+                </div>
+                <h3 class="heading-font text-xl glow-text">Digital Content</h3>
+              </div>
+              <p class="text-sm leading-relaxed" style="color:#8892a8;">Create compelling videos and online content to showcase our journey and inspire global audiences.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="relative z-10 py-12 px-6 text-center" style="border-top: 1px solid rgba(0,212,255,0.1); background: rgba(5,8,18,0.8);">
+    <div class="heading-font text-lg glow-text mb-3" id="footerLogo">RAVEN RUSH</div>
+    <p class="text-xs" style="color:#8892a8;">© 2025 Raven Rush STEM Racing Team. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
