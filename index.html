@@ -198,28 +198,35 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
  </head>
  <body class="h-full">
   <canvas id="particles"></canvas>
-  <div class="main-wrap" id="mainWrap"><!-- HEADER -->
+  <div class="main-wrap" id="mainWrap">
+   <!-- HEADER -->
    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="mainHeader" style="background: rgba(10,14,26,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,212,255,0.1);">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"><!-- Logo -->
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+     <!-- Logo -->
      <div class="flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')">
-      <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden" style="background: linear-gradient(135deg, #00d4ff, #0066aa); box-shadow: 0 0 20px rgba(0,212,255,0.3);"><img id="headerLogo" src="" alt="Raven Rush Logo" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none'; document.getElementById('headerLogoFallback').style.display='flex';">
+      <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden" style="background: linear-gradient(135deg, #00d4ff, #0066aa); box-shadow: 0 0 20px rgba(0,212,255,0.3);">
+       <img id="headerLogo" src="" alt="Raven Rush Logo" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none'; document.getElementById('headerLogoFallback').style.display='flex';">
        <div id="headerLogoFallback" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-        <svg width="24" height="24" viewbox="0 0 24 24" fill="none">
-         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
        </div>
       </div><span class="heading-font text-lg glow-text" id="logoText">RAVEN RUSH</span>
      </div><!-- Desktop Nav -->
-     <nav class="hidden lg:flex items-center gap-7" id="desktopNav"><span class="nav-link active" data-page="home">Home</span> <span class="nav-link" data-page="team">Team</span> <span class="nav-link" data-page="car">Car</span> <span class="nav-link" data-page="stem">STEM</span> <span class="nav-link" data-page="sustainability">Sustainability</span> <span class="nav-link" data-page="data">Data</span> <span class="nav-link" data-page="future">Future</span> <span class="nav-link" data-page="contact">Contact</span>
+     <nav class="hidden lg:flex items-center gap-7" id="desktopNav">
+      <span class="nav-link active" data-page="home">Home</span> <span class="nav-link" data-page="team">Team</span> <span class="nav-link" data-page="car">Car</span> <span class="nav-link" data-page="stem">STEM</span> <span class="nav-link" data-page="sustainability">Sustainability</span> <span class="nav-link" data-page="data">Data</span> <span class="nav-link" data-page="future">Future</span> <span class="nav-link" data-page="contact">Contact</span>
      </nav><!-- Mobile hamburger -->
-     <div class="lg:hidden hamburger cursor-pointer" id="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span>
+     <div class="lg:hidden hamburger cursor-pointer" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
      </div>
     </div><!-- Mobile menu -->
-    <div class="mobile-menu flex-col items-center gap-4 py-6 lg:hidden" id="mobileMenu" style="background: rgba(10,14,26,0.95);"><span class="nav-link active" data-page="home">Home</span> <span class="nav-link" data-page="team">Team</span> <span class="nav-link" data-page="car">Car</span> <span class="nav-link" data-page="stem">STEM</span> <span class="nav-link" data-page="sustainability">Sustainability</span> <span class="nav-link" data-page="data">Data</span> <span class="nav-link" data-page="future">Future</span> <span class="nav-link" data-page="contact">Contact</span>
+    <div class="mobile-menu flex-col items-center gap-4 py-6 lg:hidden" id="mobileMenu" style="background: rgba(10,14,26,0.95);">
+     <span class="nav-link active" data-page="home">Home</span> <span class="nav-link" data-page="team">Team</span> <span class="nav-link" data-page="car">Car</span> <span class="nav-link" data-page="stem">STEM</span> <span class="nav-link" data-page="sustainability">Sustainability</span> <span class="nav-link" data-page="data">Data</span> <span class="nav-link" data-page="future">Future</span> <span class="nav-link" data-page="contact">Contact</span>
     </div>
    </header><!-- ===================== HOME PAGE ===================== -->
-   <section class="page-section active-page" id="page-home"><!-- HERO -->
-    <div class="relative overflow-hidden" style="min-height: 100%; padding-top: 80px;"><!-- Orbs -->
+   <section class="page-section active-page" id="page-home">
+    <!-- HERO -->
+    <div class="relative overflow-hidden" style="min-height: 100%; padding-top: 80px;">
+     <!-- Orbs -->
      <div class="orb" style="width:500px;height:500px;background:#00d4ff;top:-100px;right:-100px;" id="orb1"></div>
      <div class="orb" style="width:400px;height:400px;background:#0066cc;bottom:-80px;left:-80px;" id="orb2"></div><!-- Speed lines -->
      <div id="speedLines" class="absolute inset-0 overflow-hidden pointer-events-none"></div><!-- Hero content -->
@@ -229,14 +236,16 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
       </div>
       <h1 class="heading-font glow-text text-6xl md:text-8xl lg:text-9xl mb-6" id="heroTitle" style="line-height:0.95;">RAVEN RUSH</h1>
       <p class="text-xl md:text-2xl font-light mb-10 max-w-xl" style="color: #8892a8;" id="heroTagline">Born to Race, Built to Win</p><button class="cta-btn text-base" onclick="navigateTo('team')">Explore Our Team</button> <!-- Scroll indicator -->
-      <div class="mt-16 flex flex-col items-center gap-2 opacity-50" style="animation: float 2s ease-in-out infinite;"><span class="text-xs uppercase tracking-widest" style="color:#8892a8;">Scroll</span> <i data-lucide="chevron-down" style="color:#00d4ff; width:20px;"></i>
+      <div class="mt-16 flex flex-col items-center gap-2 opacity-50" style="animation: float 2s ease-in-out infinite;">
+       <span class="text-xs uppercase tracking-widest" style="color:#8892a8;">Scroll</span> <i data-lucide="chevron-down" style="color:#00d4ff; width:20px;"></i>
       </div>
      </div>
     </div>
     <div class="section-divider"></div><!-- ABOUT -->
     <div class="relative py-24 px-6 grid-bg">
      <div class="max-w-4xl mx-auto text-center">
-      <div class="reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text">About Us</span>
+      <div class="reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text">About Us</span>
        <h2 class="heading-font text-3xl md:text-5xl mt-3 mb-8" style="color:#e0e6f0;" id="aboutHeading">Who We Are</h2>
       </div>
       <p class="reveal text-lg leading-relaxed" style="color:#8892a8; transition-delay:0.2s;" id="aboutText">We are a focused and adaptable STEM racing team driven by innovation, teamwork, and performance. Inspired by Formula 1, we combine creativity, engineering, and strategy to build high-performance solutions.</p>
@@ -245,7 +254,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
     <div class="section-divider"></div><!-- HIGHLIGHTS -->
     <div class="relative py-24 px-6">
      <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16 reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text">Performance</span>
+      <div class="text-center mb-16 reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text">Performance</span>
        <h2 class="heading-font text-3xl md:text-5xl mt-3" style="color:#e0e6f0;">Highlights</h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -274,7 +284,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
         </div>
        </div>
        <div class="glow-border rounded-2xl p-8 text-center tilt-card reveal-scale" style="background: rgba(0,212,255,0.03); transition-delay:0.4s;">
-        <div class="flex justify-center gap-2 mb-2"><i data-lucide="zap" style="color:#00d4ff; width:28px;"></i> <i data-lucide="target" style="color:#00d4ff; width:28px;"></i> <i data-lucide="leaf" style="color:#00d4ff; width:28px;"></i>
+        <div class="flex justify-center gap-2 mb-2">
+         <i data-lucide="zap" style="color:#00d4ff; width:28px;"></i> <i data-lucide="target" style="color:#00d4ff; width:28px;"></i> <i data-lucide="leaf" style="color:#00d4ff; width:28px;"></i>
         </div>
         <div class="text-sm uppercase tracking-wider" style="color:#8892a8;">
          Speed · Precision · Sustainability
@@ -287,13 +298,16 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
    <section class="page-section" id="page-team">
     <div class="pt-28 pb-24 px-6 grid-bg" style="min-height:100%;">
      <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16 reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text">Our Crew</span>
+      <div class="text-center mb-16 reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text">Our Crew</span>
        <h2 class="heading-font text-4xl md:text-6xl mt-3 glow-text">Meet The Team</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8"><!-- Amal -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+       <!-- Amal -->
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.1s;">
         <div class="flex items-start gap-6">
-         <div class="w-20 h-20 rounded-full flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, #00d4ff20, #0066cc30); border: 2px solid rgba(0,212,255,0.3);"><i data-lucide="palette" style="color:#00d4ff; width:32px; height:32px;"></i>
+         <div class="w-20 h-20 rounded-full flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, #00d4ff20, #0066cc30); border: 2px solid rgba(0,212,255,0.3);">
+          <i data-lucide="palette" style="color:#00d4ff; width:32px; height:32px;"></i>
          </div>
          <div>
           <h3 class="heading-font text-xl glow-text mb-1">AMAL</h3>
@@ -306,7 +320,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
        </div><!-- Layaan -->
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.2s;">
         <div class="flex items-start gap-6">
-         <div class="w-20 h-20 rounded-full flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, #00d4ff20, #0066cc30); border: 2px solid rgba(0,212,255,0.3);"><i data-lucide="bar-chart-2" style="color:#00d4ff; width:32px; height:32px;"></i>
+         <div class="w-20 h-20 rounded-full flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, #00d4ff20, #0066cc30); border: 2px solid rgba(0,212,255,0.3);">
+          <i data-lucide="bar-chart-2" style="color:#00d4ff; width:32px; height:32px;"></i>
          </div>
          <div>
           <h3 class="heading-font text-xl glow-text mb-1">LAYAAN</h3>
@@ -319,7 +334,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
        </div><!-- Tanvi -->
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.3s;">
         <div class="flex items-start gap-6">
-         <div class="w-20 h-20 rounded-full flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, #00d4ff20, #0066cc30); border: 2px solid rgba(0,212,255,0.3);"><i data-lucide="wrench" style="color:#00d4ff; width:32px; height:32px;"></i>
+         <div class="w-20 h-20 rounded-full flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, #00d4ff20, #0066cc30); border: 2px solid rgba(0,212,255,0.3);">
+          <i data-lucide="wrench" style="color:#00d4ff; width:32px; height:32px;"></i>
          </div>
          <div>
           <h3 class="heading-font text-xl glow-text mb-1">TANVI</h3>
@@ -332,7 +348,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
        </div><!-- Halah -->
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.4s;">
         <div class="flex items-start gap-6">
-         <div class="w-20 h-20 rounded-full flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, #00d4ff20, #0066cc30); border: 2px solid rgba(0,212,255,0.3);"><i data-lucide="handshake" style="color:#00d4ff; width:32px; height:32px;"></i>
+         <div class="w-20 h-20 rounded-full flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, #00d4ff20, #0066cc30); border: 2px solid rgba(0,212,255,0.3);">
+          <i data-lucide="handshake" style="color:#00d4ff; width:32px; height:32px;"></i>
          </div>
          <div>
           <h3 class="heading-font text-xl glow-text mb-1">HALAH</h3>
@@ -350,7 +367,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
    <section class="page-section" id="page-car">
     <div class="pt-28 pb-24 px-6 grid-bg" style="min-height:100%;">
      <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16 reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text">Engineering</span>
+      <div class="text-center mb-16 reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text">Engineering</span>
        <h2 class="heading-font text-4xl md:text-6xl mt-3 glow-text">Car Design</h2>
        <p class="mt-6 text-lg max-w-2xl mx-auto" style="color:#8892a8;">Our car combines speed, precision, and identity through a sleek aerodynamic design inspired by real Formula 1 vehicles.</p>
       </div><!-- Car STL Viewer Placeholder -->
@@ -358,7 +376,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
        <div class="relative w-full max-w-2xl">
         <div class="glow-border rounded-3xl p-10 flex flex-col items-center justify-center" style="background: linear-gradient(135deg, rgba(0,212,255,0.05), rgba(0,40,80,0.1)); aspect-ratio: 16/9;">
          <div class="flex flex-col items-center gap-4 w-full h-full justify-center">
-          <svg viewbox="0 0 400 180" class="w-full h-3/4" style="filter: drop-shadow(0 0 20px rgba(0,212,255,0.3));"><!-- Car body --> <path d="M60 120 Q60 85 100 80 L160 70 Q200 55 240 55 L320 60 Q360 65 370 85 L375 110 Q375 125 360 125 L80 125 Q60 125 60 120Z" fill="url(#carGrad)" stroke="#00d4ff" stroke-width="1.5" /> <!-- Cockpit --> <path d="M170 70 Q180 50 210 48 L250 50 Q265 52 270 60 L265 70Z" fill="#0a1628" stroke="#00d4ff" stroke-width="1" /> <!-- Front wing --> <path d="M55 115 L30 118 Q25 118 25 122 L25 128 Q25 132 30 132 L65 128" fill="none" stroke="#00d4ff" stroke-width="1.5" /> <!-- Rear wing --> <path d="M365 80 L380 70 Q385 68 385 72 L385 85" fill="none" stroke="#00d4ff" stroke-width="1.5" /> <line x1="372" y1="75" x2="388" y2="68" stroke="#00d4ff" stroke-width="1" /> <!-- Wheels --> <circle cx="120" cy="130" r="22" fill="#111827" stroke="#00d4ff" stroke-width="1.5" /> <circle cx="120" cy="130" r="12" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.5" /> <circle cx="120" cy="130" r="5" fill="#00d4ff" opacity="0.3" /> <circle cx="320" cy="128" r="22" fill="#111827" stroke="#00d4ff" stroke-width="1.5" /> <circle cx="320" cy="128" r="12" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.5" /> <circle cx="320" cy="128" r="5" fill="#00d4ff" opacity="0.3" /> <!-- Speed streaks --> <line x1="10" y1="95" x2="45" y2="95" stroke="#00d4ff" stroke-width="0.8" opacity="0.4" /> <line x1="5" y1="105" x2="50" y2="105" stroke="#00d4ff" stroke-width="0.5" opacity="0.3" /> <line x1="15" y1="115" x2="48" y2="115" stroke="#00d4ff" stroke-width="0.6" opacity="0.3" /> <defs>
+          <svg viewbox="0 0 400 180" class="w-full h-3/4" style="filter: drop-shadow(0 0 20px rgba(0,212,255,0.3));">
+           <!-- Car body --> <path d="M60 120 Q60 85 100 80 L160 70 Q200 55 240 55 L320 60 Q360 65 370 85 L375 110 Q375 125 360 125 L80 125 Q60 125 60 120Z" fill="url(#carGrad)" stroke="#00d4ff" stroke-width="1.5" /> <!-- Cockpit --> <path d="M170 70 Q180 50 210 48 L250 50 Q265 52 270 60 L265 70Z" fill="#0a1628" stroke="#00d4ff" stroke-width="1" /> <!-- Front wing --> <path d="M55 115 L30 118 Q25 118 25 122 L25 128 Q25 132 30 132 L65 128" fill="none" stroke="#00d4ff" stroke-width="1.5" /> <!-- Rear wing --> <path d="M365 80 L380 70 Q385 68 385 72 L385 85" fill="none" stroke="#00d4ff" stroke-width="1.5" /> <line x1="372" y1="75" x2="388" y2="68" stroke="#00d4ff" stroke-width="1" /> <!-- Wheels --> <circle cx="120" cy="130" r="22" fill="#111827" stroke="#00d4ff" stroke-width="1.5" /> <circle cx="120" cy="130" r="12" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.5" /> <circle cx="120" cy="130" r="5" fill="#00d4ff" opacity="0.3" /> <circle cx="320" cy="128" r="22" fill="#111827" stroke="#00d4ff" stroke-width="1.5" /> <circle cx="320" cy="128" r="12" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.5" /> <circle cx="320" cy="128" r="5" fill="#00d4ff" opacity="0.3" /> <!-- Speed streaks --> <line x1="10" y1="95" x2="45" y2="95" stroke="#00d4ff" stroke-width="0.8" opacity="0.4" /> <line x1="5" y1="105" x2="50" y2="105" stroke="#00d4ff" stroke-width="0.5" opacity="0.3" /> <line x1="15" y1="115" x2="48" y2="115" stroke="#00d4ff" stroke-width="0.6" opacity="0.3" /> <defs>
             <lineargradient id="carGrad" x1="0%" y1="0%" x2="100%" y2="100%">
              <stop offset="0%" style="stop-color:#0d2847" />
              <stop offset="50%" style="stop-color:#0a1e3d" />
@@ -374,19 +393,23 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
        </div>
       </div><!-- Features -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-       <div class="glow-border rounded-xl p-6 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.1s;"><i data-lucide="wind" style="color:#00d4ff; width:28px; margin-bottom:12px;"></i>
+       <div class="glow-border rounded-xl p-6 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.1s;">
+        <i data-lucide="wind" style="color:#00d4ff; width:28px; margin-bottom:12px;"></i>
         <h3 class="font-bold text-lg mb-2">Aerodynamic Structure</h3>
         <p class="text-sm" style="color:#8892a8;">Reduced drag for maximum speed through every turn.</p>
        </div>
-       <div class="glow-border rounded-xl p-6 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.2s;"><i data-lucide="feather" style="color:#00d4ff; width:28px; margin-bottom:12px;"></i>
+       <div class="glow-border rounded-xl p-6 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.2s;">
+        <i data-lucide="feather" style="color:#00d4ff; width:28px; margin-bottom:12px;"></i>
         <h3 class="font-bold text-lg mb-2">Lightweight Design</h3>
         <p class="text-sm" style="color:#8892a8;">Optimized weight distribution for explosive acceleration.</p>
        </div>
-       <div class="glow-border rounded-xl p-6 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.3s;"><i data-lucide="eye" style="color:#00d4ff; width:28px; margin-bottom:12px;"></i>
+       <div class="glow-border rounded-xl p-6 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.3s;">
+        <i data-lucide="eye" style="color:#00d4ff; width:28px; margin-bottom:12px;"></i>
         <h3 class="font-bold text-lg mb-2">High-Contrast Identity</h3>
         <p class="text-sm" style="color:#8892a8;">Blue and white livery for bold visual presence on the track.</p>
        </div>
-       <div class="glow-border rounded-xl p-6 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.4s;"><i data-lucide="waves" style="color:#00d4ff; width:28px; margin-bottom:12px;"></i>
+       <div class="glow-border rounded-xl p-6 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.4s;">
+        <i data-lucide="waves" style="color:#00d4ff; width:28px; margin-bottom:12px;"></i>
         <h3 class="font-bold text-lg mb-2">Flowing Patterns</h3>
         <p class="text-sm" style="color:#8892a8;">Design patterns representing motion, speed, and control.</p>
        </div>
@@ -397,30 +420,35 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
    <section class="page-section" id="page-stem">
     <div class="pt-28 pb-24 px-6 grid-bg" style="min-height:100%;">
      <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16 reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text">Education</span>
+      <div class="text-center mb-16 reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text">Education</span>
        <h2 class="heading-font text-4xl md:text-6xl mt-3 glow-text">STEM in Action</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.1s;">
-        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,212,255,0.1);"><i data-lucide="atom" style="color:#00d4ff; width:28px; height:28px;"></i>
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,212,255,0.1);">
+         <i data-lucide="atom" style="color:#00d4ff; width:28px; height:28px;"></i>
         </div>
         <h3 class="heading-font text-xl glow-text mb-3">SCIENCE</h3>
         <p class="text-sm leading-relaxed" style="color:#8892a8;">Understanding forces, motion, and aerodynamics to push the limits of performance.</p>
        </div>
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.2s;">
-        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,212,255,0.1);"><i data-lucide="monitor" style="color:#00d4ff; width:28px; height:28px;"></i>
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,212,255,0.1);">
+         <i data-lucide="monitor" style="color:#00d4ff; width:28px; height:28px;"></i>
         </div>
         <h3 class="heading-font text-xl glow-text mb-3">TECHNOLOGY</h3>
         <p class="text-sm leading-relaxed" style="color:#8892a8;">Using digital tools like Canva and data platforms to design, analyze, and present.</p>
        </div>
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.3s;">
-        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,212,255,0.1);"><i data-lucide="cog" style="color:#00d4ff; width:28px; height:28px;"></i>
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,212,255,0.1);">
+         <i data-lucide="cog" style="color:#00d4ff; width:28px; height:28px;"></i>
         </div>
         <h3 class="heading-font text-xl glow-text mb-3">ENGINEERING</h3>
         <p class="text-sm leading-relaxed" style="color:#8892a8;">Designing, building, and testing the car through iterative prototyping.</p>
        </div>
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.4s;">
-        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,212,255,0.1);"><i data-lucide="calculator" style="color:#00d4ff; width:28px; height:28px;"></i>
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,212,255,0.1);">
+         <i data-lucide="calculator" style="color:#00d4ff; width:28px; height:28px;"></i>
         </div>
         <h3 class="heading-font text-xl glow-text mb-3">MATHEMATICS</h3>
         <p class="text-sm leading-relaxed" style="color:#8892a8;">Analyzing speed, time, and performance data to make data-driven improvements.</p>
@@ -432,25 +460,29 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
    <section class="page-section" id="page-sustainability">
     <div class="pt-28 pb-24 px-6 grid-bg" style="min-height:100%;">
      <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-10 reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text-green">Planet First</span>
+      <div class="text-center mb-10 reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text-green">Planet First</span>
        <h2 class="heading-font text-4xl md:text-6xl mt-3" style="color: #00ffaa; text-shadow: 0 0 20px rgba(0,255,170,0.4);">Sustainability</h2>
        <p class="mt-6 text-lg max-w-2xl mx-auto" style="color:#8892a8;">We used eco-friendly materials such as recycled paper, reusable items, and biodegradable resources to reduce environmental impact.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
        <div class="glow-border-green rounded-2xl p-8 text-center tilt-card reveal-scale" style="background: rgba(0,255,170,0.03); transition-delay:0.1s;">
-        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: rgba(0,255,170,0.1); border: 1px solid rgba(0,255,170,0.3);"><i data-lucide="recycle" style="color:#00ffaa; width:30px; height:30px;"></i>
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: rgba(0,255,170,0.1); border: 1px solid rgba(0,255,170,0.3);">
+         <i data-lucide="recycle" style="color:#00ffaa; width:30px; height:30px;"></i>
         </div>
         <h3 class="heading-font text-lg mb-3" style="color:#00ffaa;">Eco Materials</h3>
         <p class="text-sm" style="color:#8892a8;">Recycled paper, cardboard, and biodegradable components throughout the build.</p>
        </div>
        <div class="glow-border-green rounded-2xl p-8 text-center tilt-card reveal-scale" style="background: rgba(0,255,170,0.03); transition-delay:0.2s;">
-        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: rgba(0,255,170,0.1); border: 1px solid rgba(0,255,170,0.3);"><i data-lucide="lightbulb" style="color:#00ffaa; width:30px; height:30px;"></i>
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: rgba(0,255,170,0.1); border: 1px solid rgba(0,255,170,0.3);">
+         <i data-lucide="lightbulb" style="color:#00ffaa; width:30px; height:30px;"></i>
         </div>
         <h3 class="heading-font text-lg mb-3" style="color:#00ffaa;">Smart Choices</h3>
         <p class="text-sm" style="color:#8892a8;">Conscious decisions at every step to minimize waste and maximize resource use.</p>
        </div>
        <div class="glow-border-green rounded-2xl p-8 text-center tilt-card reveal-scale" style="background: rgba(0,255,170,0.03); transition-delay:0.3s;">
-        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: rgba(0,255,170,0.1); border: 1px solid rgba(0,255,170,0.3);"><i data-lucide="trash-2" style="color:#00ffaa; width:30px; height:30px;"></i>
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: rgba(0,255,170,0.1); border: 1px solid rgba(0,255,170,0.3);">
+         <i data-lucide="trash-2" style="color:#00ffaa; width:30px; height:30px;"></i>
         </div>
         <h3 class="heading-font text-lg mb-3" style="color:#00ffaa;">Recycled Merch</h3>
         <p class="text-sm" style="color:#8892a8;">Team merchandise made from recycled and sustainable materials to minimize environmental footprint.</p>
@@ -462,7 +494,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
    <section class="page-section" id="page-data">
     <div class="pt-28 pb-24 px-6 grid-bg" style="min-height:100%;">
      <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16 reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text">Analytics</span>
+      <div class="text-center mb-16 reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text">Analytics</span>
        <h2 class="heading-font text-4xl md:text-6xl mt-3 glow-text">Performance Data</h2>
       </div><!-- Stats row -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -494,8 +527,7 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
       <div class="glow-border rounded-2xl p-8 reveal" style="background: rgba(0,212,255,0.03);">
        <h3 class="heading-font text-lg glow-text mb-8">Race Performance Timeline</h3>
        <div style="position: relative; height: 220px; display: flex; align-items: flex-end; gap: 2px;">
-        <svg style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;" id="lineGraph" viewbox="0 0 600 200" preserveaspectratio="xMidYMid meet">
-         <!-- Grid lines --> <line x1="40" y1="160" x2="580" y2="160" stroke="rgba(0,212,255,0.1)" stroke-width="1" /> <line x1="40" y1="120" x2="580" y2="120" stroke="rgba(0,212,255,0.05)" stroke-width="1" /> <line x1="40" y1="80" x2="580" y2="80" stroke="rgba(0,212,255,0.05)" stroke-width="1" /> <line x1="40" y1="40" x2="580" y2="40" stroke="rgba(0,212,255,0.1)" stroke-width="1" /> <!-- Y-axis --> <line x1="40" y1="20" x2="40" y2="160" stroke="rgba(0,212,255,0.2)" stroke-width="1.5" /> <!-- X-axis --> <line x1="40" y1="160" x2="580" y2="160" stroke="rgba(0,212,255,0.2)" stroke-width="1.5" /> <!-- Y labels --> <text x="30" y="165" font-size="10" fill="rgba(0,212,255,0.5)" text-anchor="end">
+        <svg style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;" id="lineGraph" viewbox="0 0 600 200" preserveaspectratio="xMidYMid meet"><!-- Grid lines --> <line x1="40" y1="160" x2="580" y2="160" stroke="rgba(0,212,255,0.1)" stroke-width="1" /> <line x1="40" y1="120" x2="580" y2="120" stroke="rgba(0,212,255,0.05)" stroke-width="1" /> <line x1="40" y1="80" x2="580" y2="80" stroke="rgba(0,212,255,0.05)" stroke-width="1" /> <line x1="40" y1="40" x2="580" y2="40" stroke="rgba(0,212,255,0.1)" stroke-width="1" /> <!-- Y-axis --> <line x1="40" y1="20" x2="40" y2="160" stroke="rgba(0,212,255,0.2)" stroke-width="1.5" /> <!-- X-axis --> <line x1="40" y1="160" x2="580" y2="160" stroke="rgba(0,212,255,0.2)" stroke-width="1.5" /> <!-- Y labels --> <text x="30" y="165" font-size="10" fill="rgba(0,212,255,0.5)" text-anchor="end">
           0
          </text> <text x="30" y="125" font-size="10" fill="rgba(0,212,255,0.5)" text-anchor="end">
           25
@@ -582,15 +614,16 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
    <section class="page-section" id="page-future">
     <div class="pt-28 pb-24 px-6 grid-bg" style="min-height:100%;">
      <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16 reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text">Roadmap</span>
+      <div class="text-center mb-16 reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text">Roadmap</span>
        <h2 class="heading-font text-4xl md:text-6xl mt-3 glow-text">Future Plans</h2>
        <p class="mt-6 text-lg max-w-2xl mx-auto" style="color:#8892a8;">Our journey doesn't stop here. We aim to keep improving, innovating, and inspiring through STEM and racing.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-       <!-- Card 1 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8"><!-- Card 1 -->
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.1s; cursor: pointer;">
         <div class="flex items-start gap-4 mb-4">
-         <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);"><i data-lucide="zap" style="color:#00d4ff; width:24px; height:24px;"></i>
+         <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);">
+          <i data-lucide="zap" style="color:#00d4ff; width:24px; height:24px;"></i>
          </div>
          <h3 class="heading-font text-xl glow-text">Improve Car Performance</h3>
         </div>
@@ -598,7 +631,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
        </div><!-- Card 2 -->
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.2s; cursor: pointer;">
         <div class="flex items-start gap-4 mb-4">
-         <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);"><i data-lucide="book-open" style="color:#00d4ff; width:24px; height:24px;"></i>
+         <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);">
+          <i data-lucide="book-open" style="color:#00d4ff; width:24px; height:24px;"></i>
          </div>
          <h3 class="heading-font text-xl glow-text">STEM Workshops</h3>
         </div>
@@ -606,7 +640,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
        </div><!-- Card 3 -->
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.3s; cursor: pointer;">
         <div class="flex items-start gap-4 mb-4">
-         <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);"><i data-lucide="network" style="color:#00d4ff; width:24px; height:24px;"></i>
+         <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);">
+          <i data-lucide="network" style="color:#00d4ff; width:24px; height:24px;"></i>
          </div>
          <h3 class="heading-font text-xl glow-text">Collaboration</h3>
         </div>
@@ -614,7 +649,8 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
        </div><!-- Card 4 -->
        <div class="glow-border rounded-2xl p-8 tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.4s; cursor: pointer;">
         <div class="flex items-start gap-4 mb-4">
-         <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);"><i data-lucide="video" style="color:#00d4ff; width:24px; height:24px;"></i>
+         <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(0,212,255,0.1);">
+          <i data-lucide="video" style="color:#00d4ff; width:24px; height:24px;"></i>
          </div>
          <h3 class="heading-font text-xl glow-text">Digital Content</h3>
         </div>
@@ -627,28 +663,34 @@ body { font-family: 'Poppins', sans-serif; background: #0a0e1a; color: #e0e6f0; 
    <section class="page-section" id="page-contact">
     <div class="pt-28 pb-24 px-6 grid-bg" style="min-height:100%;">
      <div class="max-w-2xl mx-auto">
-      <div class="text-center mb-12 reveal"><span class="text-sm font-semibold tracking-widest uppercase glow-text">Get In Touch</span>
+      <div class="text-center mb-12 reveal">
+       <span class="text-sm font-semibold tracking-widest uppercase glow-text">Get In Touch</span>
        <h2 class="heading-font text-4xl md:text-6xl mt-3 glow-text">Contact Us</h2>
       </div><!-- Contact Info Section -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
        <div class="glow-border rounded-2xl p-8 text-center tilt-card reveal-left" style="background: rgba(0,212,255,0.03); transition-delay:0.1s;">
-        <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4" style="background: rgba(0,212,255,0.1);"><i data-lucide="mail" style="color:#00d4ff; width:24px; height:24px;"></i>
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4" style="background: rgba(0,212,255,0.1);">
+         <i data-lucide="mail" style="color:#00d4ff; width:24px; height:24px;"></i>
         </div>
         <h3 class="font-bold text-lg mb-2">Email</h3><a href="mailto:ravenrush.ethara@gmail.com" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; transition: all 0.3s;" onmouseover="this.style.textShadow='0 0 15px rgba(0,212,255,0.6)'" onmouseout="this.style.textShadow='none'">ravenrush.ethara@gmail.com</a>
        </div>
        <div class="glow-border rounded-2xl p-8 text-center tilt-card reveal-right" style="background: rgba(0,212,255,0.03); transition-delay:0.2s;">
-        <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4" style="background: rgba(0,212,255,0.1);"><i data-lucide="share-2" style="color:#00d4ff; width:24px; height:24px;"></i>
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4" style="background: rgba(0,212,255,0.1);">
+         <i data-lucide="share-2" style="color:#00d4ff; width:24px; height:24px;"></i>
         </div>
         <h3 class="font-bold text-lg mb-2">Social Media</h3>
         <p style="color: #8892a8; font-size: 0.9rem;">@theravenrushteam</p>
        </div>
       </div><!-- Contact Form -->
       <form class="glow-border rounded-2xl p-8 reveal-scale" style="background: rgba(0,212,255,0.03);" onsubmit="handleContact(event)">
-       <div class="mb-5"><label for="contactName" class="block text-sm font-semibold mb-2" style="color:#00d4ff;">Name</label> <input type="text" id="contactName" class="w-full px-4 py-3 rounded-lg text-sm" style="background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); color: #e0e6f0; outline:none; transition: all 0.3s;" placeholder="Your name" required onfocus="this.style.boxShadow='0 0 20px rgba(0,212,255,0.3), inset 0 0 10px rgba(0,212,255,0.1)'; this.style.borderColor='rgba(0,212,255,0.6)'" onblur="this.style.boxShadow=''; this.style.borderColor='rgba(0,212,255,0.2)'">
+       <div class="mb-5">
+        <label for="contactName" class="block text-sm font-semibold mb-2" style="color:#00d4ff;">Name</label> <input type="text" id="contactName" class="w-full px-4 py-3 rounded-lg text-sm" style="background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); color: #e0e6f0; outline:none; transition: all 0.3s;" placeholder="Your name" required onfocus="this.style.boxShadow='0 0 20px rgba(0,212,255,0.3), inset 0 0 10px rgba(0,212,255,0.1)'; this.style.borderColor='rgba(0,212,255,0.6)'" onblur="this.style.boxShadow=''; this.style.borderColor='rgba(0,212,255,0.2)'">
        </div>
-       <div class="mb-5"><label for="contactEmail" class="block text-sm font-semibold mb-2" style="color:#00d4ff;">Email</label> <input type="email" id="contactEmail" class="w-full px-4 py-3 rounded-lg text-sm" style="background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); color: #e0e6f0; outline:none; transition: all 0.3s;" placeholder="you@email.com" required onfocus="this.style.boxShadow='0 0 20px rgba(0,212,255,0.3), inset 0 0 10px rgba(0,212,255,0.1)'; this.style.borderColor='rgba(0,212,255,0.6)'" onblur="this.style.boxShadow=''; this.style.borderColor='rgba(0,212,255,0.2)'">
+       <div class="mb-5">
+        <label for="contactEmail" class="block text-sm font-semibold mb-2" style="color:#00d4ff;">Email</label> <input type="email" id="contactEmail" class="w-full px-4 py-3 rounded-lg text-sm" style="background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); color: #e0e6f0; outline:none; transition: all 0.3s;" placeholder="you@email.com" required onfocus="this.style.boxShadow='0 0 20px rgba(0,212,255,0.3), inset 0 0 10px rgba(0,212,255,0.1)'; this.style.borderColor='rgba(0,212,255,0.6)'" onblur="this.style.boxShadow=''; this.style.borderColor='rgba(0,212,255,0.2)'">
        </div>
-       <div class="mb-6"><label for="contactMsg" class="block text-sm font-semibold mb-2" style="color:#00d4ff;">Message</label> <textarea id="contactMsg" rows="4" class="w-full px-4 py-3 rounded-lg text-sm resize-none" style="background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); color: #e0e6f0; outline:none; transition: all 0.3s;" placeholder="Your message..." required onfocus="this.style.boxShadow='0 0 20px rgba(0,212,255,0.3), inset 0 0 10px rgba(0,212,255,0.1)'; this.style.borderColor='rgba(0,212,255,0.6)'" onblur="this.style.boxShadow=''; this.style.borderColor='rgba(0,212,255,0.2)'"></textarea>
+       <div class="mb-6">
+        <label for="contactMsg" class="block text-sm font-semibold mb-2" style="color:#00d4ff;">Message</label> <textarea id="contactMsg" rows="4" class="w-full px-4 py-3 rounded-lg text-sm resize-none" style="background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); color: #e0e6f0; outline:none; transition: all 0.3s;" placeholder="Your message..." required onfocus="this.style.boxShadow='0 0 20px rgba(0,212,255,0.3), inset 0 0 10px rgba(0,212,255,0.1)'; this.style.borderColor='rgba(0,212,255,0.6)'" onblur="this.style.boxShadow=''; this.style.borderColor='rgba(0,212,255,0.2)'"></textarea>
        </div><button type="submit" class="cta-btn w-full text-center" id="contactBtn">Send Message</button>
        <div id="contactSuccess" class="hidden mt-4 text-center text-sm font-semibold" style="color:#00ffaa;">
         ✓ Message sent! We'll be in touch.
@@ -908,5 +950,5 @@ document.head.appendChild(style);
 // Init icons
 lucide.createIcons();
 </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9eb17bff35342e9b',t:'MTc3NTk4OTA3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9eb1916e15942e9b',t:'MTc3NTk4OTk1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
